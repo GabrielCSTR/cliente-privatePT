@@ -1,0 +1,8 @@
+Welcome to the Warp Gate.
+Can move to the selected place from the map on 
+right side.
+
+When you use warp gate, there're some charges
+for using warp gates going to the other regions
+except Pillai and Ricarten.
+

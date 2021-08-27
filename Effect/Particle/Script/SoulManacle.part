@@ -1,0 +1,161 @@
+particlesystem "HolyValor" 1.00 {
+  position = XYZ(0,0,0)
+
+  eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    particleType = TYPE_THREE
+    numparticles = 12
+    gravity = XYZ(0,1,0)
+    emitrate = 50
+    loops = 1
+    emitradius = xyz(random(-15,15),random(-5,5),random(-15,15))
+    lifetime = 1
+    texture = "effect\\particle\\flare2.bmp"
+    initial size = random(14,28)
+    initial sizeext = random(300,400)
+    initial color = rgba(100,0,random(200,255),50)
+    fade so at 0.4 color = rgba(100,0,random(100,255),180)
+    initial velocity = XYZ(0,random(300,400),0)
+    fade so final color = rgba(100,0,255,0)
+    fade so final sizeext = random(400,600)
+    fade so final size = 15
+    }
+  eventsequence "Light1" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 40
+    emitradius = xyz(0,8,0)
+   delay = 0.1
+    loops = 1
+    lifetime = 1.5
+    texture = "effect\\particle\\flare4.bmp"
+    initial color = rgba(0,150,235,255)
+    initial size = 80
+    initial velocity = XYZ(0,0,0)
+    initial partAngleZ = random(0,360)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 40
+    }
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_invshadow
+    particletype = TYPE_TWO
+    numparticles = 1
+    emitradius = xyz(0,2,0)
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    loops = 1
+    lifetime = 2.2
+    texture = "effect\\particle\flare4.bmp"
+    initial size = 100
+    initial color = rgba(0,0,0,0)
+    fade so at 0.1 color = rgba(255,255,255,255)
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 150
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_lamp
+    particletype = TYPE_TWO
+    numparticles = 1
+    emitradius = xyz(0,2,0)
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    loops = 1
+    lifetime = 1.5
+    texture = "effect\\particle\flare4.bmp"
+    initial size = 50
+    fade so at 0.1 color = rgba(255,255,255,180)
+    fade so final color = rgba(0,255,255,0)
+    fade so final size = 80
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    emitradius = xyz(0,2,0)
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    loops = 1
+    lifetime = 2.6
+    texture = "effect\\particle\fire_006.bmp"
+    initial size = 100
+    initial color = rgba(255,255,255,0)
+    fade so at 0.1 color = rgba(255,255,255,255)
+    initial partAngleY = 0
+    fade so final color = rgba(255,0,255,0)
+   fade so final partAngleY = 180
+    fade so final size = 150
+    }
+  eventsequence "faeries" {
+   sourceblendmode = BLEND_LAMP
+    loops = 1
+   delay = 0.1
+    numparticles = 27
+    gravity = XYZ(0,random(-5,5,0)
+    emitrate = 50
+    emitradius = xyz(random(-25,25),random(-10,0),random(-25,25))
+    lifetime = 1.4
+    texture = "effect\\particle\flare4.bmp"
+    initial size = random(5,10)
+    initial color = rgba(255,255,255,random(100,255))
+    initial velocity = XYZ(0,random(50,100),0)
+    fade so final color = rgba(0,255,255,0)
+    fade so final size = 1
+    }
+
+  eventsequence "faeries" {
+   sourceblendmode = BLEND_invshadow
+   delay = 0.1
+    loops = 1
+    numparticles = 25
+    gravity = XYZ(0,random(-5,5,0)
+    emitrate = 50
+    emitradius = xyz(random(-25,25),random(-10,0),random(-25,25))
+    lifetime = 0.9
+    texture = "effect\\particle\flare4.bmp"
+    initial size = random(3,7)
+    initial color = rgba(255,255,255,random(100,200))
+    initial velocity = XYZ(0,random(60,140),0)
+    fade so final color = rgba(0,0,0,80)
+    fade so final size = 1
+    }
+
+  eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 200
+    emitradius = xyz(0,10,0)
+    lifetime = 3
+    texture = "effect\\particle\\flare4.bmp"
+    initial size = 100
+    initial color = rgba(60,30,100,0)
+    initial velocity = XYZ(0,0,0)
+    fade so at 0.1 color = rgba(60,30,100,180)
+    fade so final color = rgba(60,30,100,0)
+    fade so final size = 180
+    }
+
+   eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    numparticles = 3
+    gravity = XYZ(0,0,0)
+    emitrate = 25
+    emitradius = xyz(0,2,0)
+    lifetime = 1.8
+    texture = "effect\\particle\\purplerole.bmp"
+    initial size = random(100,130)
+    initial color = rgba(255,255,255,0)
+    initial velocity = XYZ(0,0,0)
+    fade so at 0.2 color = rgba(255,255,255,random(120,190))
+    initial partAngleY = 0
+   fade so final partAngleY = random(350,360)
+    fade so final color = rgba(0,200,255,0)
+    fade so final size = random(45,55)
+    }
+}

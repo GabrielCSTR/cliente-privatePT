@@ -1,0 +1,143 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,0,0)
+  
+    eventsequence "light2" {
+    sourceblendmode = BLEND_invshadow
+    numparticles = 30
+    loops = 1
+    gravity = XYZ(0,-50,0)
+    emitrate = 120
+    emitradius = xyz(random(-60,60),0,random(-60,60))
+    lifetime = random(0.8,1)
+    texture = "effect\\particle\\smokestar.bmp"
+    initial size = random(50,70)
+    initial color = rgba(100,100,0,100)
+    initial partAngleZ = random(0,360)
+    initial LocalAngleY = 0
+    initial velocity = XYZ(0,random(100,150),0)
+    fade so final color = rgba(0,0,0,0)
+    fade so final localangleY = 550
+    }
+    eventsequence "Black1" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitradius = xyz(0,0,0)
+    emitrate = 150
+    loops = 1
+    lifetime = 1
+    texture = "effect\\particle\\aurora4_201.bmp"
+    initial color = rgba(0,50,255,0)
+    initial size = 170
+    initial sizeext = 180
+    fade so final sizeext = 100
+    fade so at 0.2 color = rgba(0,0,255,105)
+    initial velocity = XYZ(0,100,0)
+    fade so final color = rgba(50,0,255,0)
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1
+    numparticles = 10
+    gravity = XYZ(0,0,0)
+    emitrate = 60
+    emitradius = xyz(random(-60,60),0,random(-60,60))
+    lifetime = 1
+    texture = "effect\\particle\\flare4.bmp"
+    initial size = 5
+    initial sizeExt = 35
+    initial LocalAngleY = 0
+    initial color = rgba(0,0,200,200)
+    fade so at 0.3 color = rgba(0,255,200,150)
+    initial velocity = XYZ(0,random(100,150),0)
+    fade so final color = rgba(20,0,200,0)
+    fade so final size = 20
+    fade so final LocalAngleY = 500
+    }
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1
+    numparticles = 10
+    gravity = XYZ(0,0,0)
+    emitrate = 60
+    emitradius = xyz(random(-65,65),0,random(-65,65))
+    lifetime = 1
+    texture = "effect\\particle\\flare4.bmp"
+    initial size = 5
+    initial sizeExt = 50
+    initial LocalAngleY = 0
+    initial color = rgba(0,50,255,200)
+    fade so at 0.3 color = rgba(0,0,255,150)
+    initial velocity = XYZ(0,random(100,150),0)
+    fade so final color = rgba(50,0,200,0)
+    fade so final size = 1
+    fade so final LocalAngleY = 400
+    }
+	
+	eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1
+    numparticles = 10
+    gravity = XYZ(0,0,0)
+    emitrate = 30
+    emitradius = xyz(random(-60,60),0,random(-60,60))
+    lifetime = random(0.8,1.2)
+    texture = "effect\\particle\ballblue.bmp"
+    initial size = 120
+    initial sizeExt = 50
+    initial LocalAngleY = 0
+    initial color = rgba(255,255,255,50)
+    initial velocity = XYZ(0,random(100,150),0)
+    fade so final color = rgba(50,0,255,0)
+    fade so final size = 80
+    fade so final LocalAngleY = 500
+    }
+	
+    eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 30
+    loops = 1
+    gravity = XYZ(0,-10,0)
+    emitrate = 120
+    emitradius = xyz(random(-60,60),0,random(-60,60))
+    lifetime = random(0.8,1)
+    texture = "effect\\particle\\smokestar.bmp"
+    initial size = random(50,70)
+    initial color = rgba(0,50,200,150)
+    initial partAngleZ = random(0,360)
+    initial LocalAngleY = 0
+    initial velocity = XYZ(0,random(100,150),0)
+    fade so final color = rgba(80,0,200,0)
+    fade so final localangleY = 550
+    }
+
+	
+   eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 20
+    loops = 1
+    gravity = XYZ(0,-30,0)
+    emitrate = 80
+    emitradius = xyz(random(-60,60),0,random(-60,60))
+    lifetime = 1
+    texture = "effect\\particle\\ballblue.bmp"
+    initial size = 5
+    fade so at 0.2 size = random(30,40)
+    fade so at 0.4 size = 5
+    fade so at 0.5 size = random(30,40)
+    fade so at 0.6 size = 5
+    fade so at 1 size = 1
+    initial color = rgba(0,200,200,100)
+    initial LocalAngleY = 0
+    fade so at 0.4 color = rgba(255,255,255,100)
+    initial partAngleZ = random(0,360)
+    initial velocity = XYZ(0,random(90,120),0)
+    fade so final color = rgba(100,0,200,0)
+    fade so final localangleY = 400
+    }
+}

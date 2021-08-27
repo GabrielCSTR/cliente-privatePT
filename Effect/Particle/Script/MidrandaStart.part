@@ -1,0 +1,19 @@
+particlesystem "HolyValor" 1.00 {
+  position = XYZ(0,0,0)
+    eventsequence "UpLight" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 30
+    gravity = XYZ(0,-5,0)
+    emitrate = 50
+    emitradius = xyz(0,30,0)
+    loops = 1
+    lifetime = 1
+    texture = "effect\\particle\\smokestar.bmp"
+    initial size = random(30,70)
+    initial color = rgba(50,0,255,200)
+    initial partAngleZ = random(0,360)
+    initial velocity = XYZ(random(-20,20),random(-20,20),random(-20,20))        
+    fade so final color = rgba(50,0,255,0)
+    fade so final size = 15
+    }
+}

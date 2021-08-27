@@ -1,0 +1,78 @@
+particlesystem "OmiCronHit1" 1.00 {
+ position = XYZ(0,0,0)
+
+    eventsequence "FuryRespawn" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    loops = 1
+    numparticles = 2
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,10,0)
+    lifetime = 0.5
+    texture = "effect\\particle\\circle_012.bmp"
+    initial size = 50
+    initial color = rgba(0,250,255,200)
+    initial velocity = XYZ(0,0,0)
+    initial partAngleY = 0
+    fade so at 0.5 partAngleY = random(100,120)
+    fade so final color = rgba(0,50,255,0)
+    fade so final size = 200
+    }
+
+    eventsequence "Line" {
+    sourceblendmode = BLEND_lamp
+    particletype = TYPE_three
+    numparticles = 10
+    loops = 1
+    gravity = XYZ(0,-50,0)
+    emitrate = 100
+    emitradius = xyz(random(-20,20),random(-10,10),random(-20,20))
+    lifetime = 1
+    texture = "effect\\particle\\flare4.bmp"
+    initial size = random(6,7)
+    initial sizeExt = random(130,100)
+    initial color = rgba(0,100,255,0)
+   fade so at 0.5 color = rgba(0,150,255,150)
+    initial velocity = XYZ(0,random(100,120),0)
+    fade so final color = rgba(0,50,255,0)
+    fade so final size = 3
+
+  }
+    eventsequence "Line" {
+    sourceblendmode = BLEND_lamp
+    particletype = TYPE_three
+    numparticles = 10
+    loops = 1
+    gravity = XYZ(0,-50,0)
+    emitrate = 100
+    emitradius = xyz(random(-20,20),random(-10,10),random(-20,20))
+    lifetime = 1
+    texture = "effect\\particle\\flare4.bmp"
+    initial size = random(5,7)
+    initial sizeExt = random(50,90)
+    initial color = rgba(0,100,255,0)
+   fade so at 0.5 color = rgba(0,150,255,150)
+    initial velocity = XYZ(0,random(100,120),0)
+    fade so final color = rgba(0,50,255,0)
+    fade so final size = 3
+
+  }
+    eventsequence "Black1" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    gravity = XYZ(0,-50,0)
+    emitradius = xyz(0,0,0)
+    emitrate = 150
+    loops = 1
+    lifetime = 1
+    texture = "effect\\particle\\aurora4_201.bmp"
+    initial color = rgba(0,150,255,0)
+    initial size = 50
+    initial sizeext = 120
+    fade so at 0.2 color = rgba(0,100,255,105)
+    initial velocity = XYZ(0,130,0)
+    fade so final color = rgba(0,50,255,0)
+
+    }
+}

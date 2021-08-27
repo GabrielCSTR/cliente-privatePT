@@ -1,0 +1,63 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,20,0)
+  eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1
+    delay = 0.5
+    numparticles = 15
+    gravity = XYZ(0,random(5,-5),0)
+    emitrate = 20
+    emitradius = xyz(random(-10,10),random(70,90),random(-10,10))
+    lifetime = 1.5
+    texture = "effect\\particle\\flare4.bmp"
+    initial size = random(4,8)
+    initial sizeExt = 20
+    initial LocalAngleY = 0
+    initial color = rgba(255,0,0,0)
+   fade so at 0.2 color = rgba(255,0,0,255)
+    initial velocity = XYZ(random(-25,25),random(-120,-80),random(-25,25))
+    fade so final color = rgba(255,0,0,0)
+    fade so final LocalAngleY = random(-200,-100)
+    }
+
+  eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1
+    delay = 0.5
+    numparticles = 15
+    gravity = XYZ(0,random(4,7),0)
+    emitrate = 20
+    emitradius = xyz(random(-10,10),random(120,150),random(-10,10))
+    lifetime = 1.5
+    texture = "effect\\particle\\flare4.bmp"
+    initial size = random(4,8)
+    initial sizeExt = 20
+    initial LocalAngleY = 0
+    initial color = rgba(255,0,0,0)
+   fade so at 0.2 color = rgba(255,random(0,50),0,255)
+    initial velocity = XYZ(random(-20,20),random(-120,-80),random(-20,20))
+    fade so final color = rgba(255,0,0,0)
+    fade so final LocalAngleY = random(-200,-100)
+    }
+    eventsequence "light2" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 1
+    delay = 0.5
+    gravity = XYZ(0,0,0)
+    emitrate = 40
+    loops = 1
+    emitradius = xyz(0,130,0)
+    lifetime = 2.3
+    texture = "effect\\particle\\flare4.bmp"
+    initial sizeExt = 300
+    initial size = 100
+    initial color = rgba(255,0,0,0)
+   fade so at 0.4 color = rgba(255,0,0,100)
+    fade so final size = 150
+    initial velocity = XYZ(0,-48,0)
+    fade so final color = rgba(255,0,0,0)
+    }
+    
+}

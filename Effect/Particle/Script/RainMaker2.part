@@ -1,0 +1,71 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,0,0)
+
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,25,0)
+    lifetime = 1000
+    texture = "effect\\particle\\RainMakerKeep.tga"
+    initial size = 1
+    initial color = rgba(255,255,255,0)
+    initial partAngleY = 0
+
+    fade so at 0.5 color = rgba(255,255,255,255)
+    fade so at 0.5 size  = 45
+    
+    fade so at 1 color = rgba(255,255,255,150)
+    fade so at 1 size  = 45
+    at 1 velocity  = XYZ(0, -24, 0)
+
+    fade so at 2 color = rgba(255,255,255,200)
+    fade so at 2 size  = random(40,45)
+    at 2 velocity  = XYZ(0, 0, 0)
+
+    fade so at 2.5 color = rgba(255,255,255,150)
+    fade so at 2.5 size  = random(55,60)
+
+    fade so at 3 color = rgba(255,255,255,200)
+    fade so at 3 size  = random(40,45)
+    fade so at 3 partAngleY = 90
+
+    at 3 eventtimer = 2
+    }
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,25,0)
+    lifetime = 1000
+    texture = "effect\\particle\\circle-3.bmp"
+    initial size = 1
+    initial color = rgba(150,20,235,0)
+    initial partAngleY = 0
+
+    fade so at 0.5 color = rgba(100,100,255,255)
+    fade so at 0.5 size  = 45
+    
+    fade so at 1 color = rgba(180,100,255,180)
+    fade so at 1 size  = 45
+    at 1 velocity  = XYZ(0, -24, 0)
+
+    fade so at 2 color = rgba(100,100,255,220)
+    fade so at 2 size  = random(40,45)
+    at 2 velocity  = XYZ(0, 0, 0)
+
+    fade so at 2.5 color = rgba(180,100,255,180)
+    fade so at 2.5 size  = random(50,60)
+
+    fade so at 3 color = rgba(100,100,255,220)
+    fade so at 3 size  = random(40,45)
+    fade so at 3 partAngleY = 250
+
+    at 3 eventtimer = 2
+    }
+
+}

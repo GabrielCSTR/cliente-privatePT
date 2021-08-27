@@ -1,0 +1,103 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,0,0)
+  
+  eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_THREE
+    loops = 1
+    numparticles = 40
+    gravity = XYZ(0,0,0)
+    emitrate = 90
+    emitradius = xyz(0,0,0)
+    lifetime = 0.45
+    texture = "effect\\particle\\flare_003.bmp"
+    initial size = random(7,8)
+    initial sizeExt = random(49,50)
+    initial partAngle = XYZ(random(-360,360), random(-360,360), random(-360,360))
+    initial color = rgba(255,255,255,100)
+    initial velocity = XYZ(0,0,0)
+    fade so final color = rgba(0,0,255,0)
+    fade so final size = random(80,100)
+    }
+    eventsequence "BackLight" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(0,8,0)
+    lifetime = 0.8
+    texture = "effect\\particle\\flare_003.bmp"
+    initial size = 80
+    initial color = rgba(255,255,255,50)
+	fade so at 0.1 color = rgba(255,255,255,200)
+    fade so final color = rgba(255,255,255,0)
+    fade so final size = 150
+  }
+    eventsequence "BackLight" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 10
+    emitradius = xyz(0,8,0)
+    lifetime = 1.7
+    texture = "effect\\particle\\flashback.bmp"
+    initial size = 300
+    initial color = rgba(0,0,255,50)
+    fade so at 1.0 color = rgba(0,0,255,100)
+    fade so final color = rgba(0,0,255,0)
+    fade so final size = 450
+  }
+
+ eventsequence "Spaceship Debris" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 5
+    gravity = XYZ(0,0,0)
+    emitrate = 1000
+    emitradius = XYZ(random(-1,1),random(-1,1),random(-1,1))
+    lifetime = 0.3
+    texture = "effect\\particle\\zap.bmp"
+
+    initial size = random(5,15)
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(random(-80,80),random(0,80),random(-80,80))
+    fade so final color = rgba(255,255,255,0)
+
+    }
+    eventsequence "FireJet" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 6
+    gravity = XYZ(0,-10,0)
+    emitrate = 40
+    loops = 4
+    lifetime = random(0.02,0.07)
+    texture = "effect\\particle\\light-01.bmp"
+    initial color = rgba(255,255,255,190)
+    initial size = random(40,50)
+    initial partangleZ = random(0,360)
+    initial velocity = XYZ(random(-20,20),0,random(-20,20))
+    fade so final color = rgba(0,0,0,0)
+    fade so final partAngleZ = random(0,360)
+    fade so final size = 1
+    }
+
+    eventsequence "FireJet" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 6
+    gravity = XYZ(0,-10,0)
+    emitrate = 40
+    loops = 1
+    lifetime = random(0.7,1)
+    texture = "effect\\particle\\light-02.bmp"
+    
+    initial color = rgba(255,255,255,190)
+    initial size = 50
+    initial partAngleZ = random(0,360)
+    initial velocity = XYZ(random(-5,5),random(-5,5),random(-5,5))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 40
+    fade so final partAngleZ = random(0,1000)
+    }
+}

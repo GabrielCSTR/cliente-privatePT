@@ -1,0 +1,121 @@
+particlesystem "Power" 1.00 {
+  position = XYZ(0,0,0)
+   eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1
+    delay = 0
+    numparticles = random(4,6)
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(random(-50,50),-10,random(-50,50))
+    lifetime = 1.3
+    texture = "effect\\particle\\ghostpurple.bmp"
+    initial size = random(13,18)
+    initial sizeExt = 10
+    initial LocalAngleY = 0
+    initial color = rgba(255,255,255,255)
+    fade so at 0.7 color = rgba(255,random(0,120),255,random(120,140)) 
+    initial velocity = XYZ(random(-20,20),random(80,120),random(-20,20))
+    fade so final color = rgba(0,0,255,0)
+    fade so final size = 8
+    fade so final LocalAngleY = random(200,400)
+    fade so final sizeExt = 50
+    }
+   eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1
+    delay = 0
+    numparticles = random(1,3)
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(random(-55,55),-10,random(-55,55))
+    lifetime = 1.3
+    texture = "effect\\particle\\Line_001.bmp"
+    initial size = random(3,6)
+    initial sizeExt = 20
+    initial LocalAngleY = 0
+    initial color = rgba(100,0,255,255)
+    initial velocity = XYZ(random(-20,20),random(80,120),random(-20,20))
+    fade so final color = rgba(255,0,255,0)
+    fade so final LocalAngleY = random(200,400)
+    fade so final size = 3
+    fade so final sizeExt = 60
+    }
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    loops = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,1,0)
+    lifetime = 1.5
+    texture = "effect\\particle\\purplerole.bmp"
+    initial size = 20
+    initial color = rgba(100,0,255,150)
+    fade so final size = 180
+    fade so final color = rgba(0,0,255,0)
+    initial partAngleY = 0
+   fade so final partAngleY = 360
+    }
+    eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_TWO
+    numparticles = 1
+    loops = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(0,1,0)
+    lifetime = 1
+    texture = "effect\\particle\\purplerole.bmp"
+    initial size = 20
+    initial color = rgba(255,0,255,150)
+    fade so final size = 150
+    fade so final color = rgba(0,0,255,0)
+    initial partAngleY = 0
+   fade so final partAngleY = 360
+    }
+   eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1
+    delay = 0
+    numparticles = random(1,3)
+    gravity = XYZ(0,0,0)
+    emitrate = 20
+    emitradius = xyz(random(-55,55),-10,random(-55,55))
+    lifetime = 1
+    texture = "effect\\particle\\Line_001.bmp"
+    initial size = random(3,6)
+    initial sizeExt = 20
+    initial LocalAngleY = 0
+    initial color = rgba(50,0,255,255)
+    initial velocity = XYZ(random(-20,20),random(80,120),random(-20,20))
+    fade so final color = rgba(50,0,255,0)
+    fade so final LocalAngleY = random(300,500)
+    fade so final size = 3
+    fade so final sizeExt = 60
+    }
+  eventsequence "faeries" {
+   sourceblendmode = BLEND_LAMP
+    loops = 1
+   delay = 0.1
+    numparticles = 27
+    gravity = XYZ(0,0,0)
+    emitrate = 60
+    emitradius = xyz(random(-42,42),random(-5,5),random(-42,42))
+    lifetime = 0.8
+    texture = "effect\\particle\ballmag.bmp"
+    initial size = random(5,10)
+    fade so at 0.1 size = random(10,15)
+    fade so at 0.2 size = random(5,10)
+    fade so at 0.3 size = random(10,15)
+    fade so at 0.4 size = random(5,10)
+    initial color = rgba(255,255,255,random(100,255))
+    initial velocity = XYZ(0,random(50,100),0)
+    fade so final color = rgba(255,255,255,80)
+    fade so final size = 1
+    }
+}

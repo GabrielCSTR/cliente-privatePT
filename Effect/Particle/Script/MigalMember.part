@@ -1,0 +1,46 @@
+particlesystem "HolyValor" 1.00 {
+  position = XYZ(0,0,0)
+
+eventsequence "downParticle" {
+    sourceblendmode = BLEND_LAMP
+    loops = 1
+    numparticles = 1
+    gravity = XYZ(0,0,0)
+    emitrate = 8
+    emitradius = xyz(0, 60, 0)
+    lifetime = 1000
+    texture = "effect\\particle\\MigalMember.tga"
+    initial size = 12
+    initial color = rgba(255,255,255,0)
+    fade so at 0.5 color = rgba(255,255,255,200)
+    fade so at 0.5 size  = 15
+    initial partAngleZ = -45
+    fade so at 1.2 color = rgba(255,255,255,200)
+    fade so at 1.2 size  = 18
+    fade so at 2 color = rgba(255,255,255,200)
+    fade so at 2 size  = 15
+    at 2 eventtimer = 0.5
+    fade so at 3 color = rgba(0,0,0,0)
+	fade so at 3 size  = 12
+   }
+   eventsequence "faeries" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = random(1,10)
+    gravity = XYZ(0,5,0)
+    emitrate = 10
+    emitradius = xyz(random(-5,5),random(56,64),random(-5,5))
+    lifetime = 0.8
+    texture = "effect\\particle\\star1.TGA"
+    initial color = rgba(255,0,random(0,200),255)
+    initial partAngleZ = 0
+    at 0.1 size = random(5,10)
+    at 0.2 size = random(5,10)
+    at 0.3 size = random(5,10)
+    at 0.4 size = random(5,10)
+    at 0.5 size = random(5,10)
+    initial velocity = XYZ(random(-5,5),random(-5,5),random(-5,5))
+    fade so at 0.5 color = rgba(255,0,random(0,200),100)
+    fade so final color = rgba(255,0,random(0,200),0)
+    fade so final size = 1
+   }
+}

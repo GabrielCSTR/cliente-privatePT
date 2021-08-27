@@ -1,0 +1,103 @@
+particlesystem "FireJet" 1.00 {
+  position = XYZ(0,50,-50)
+
+  eventsequence "Smoke" {
+    sourceblendmode = BLEND_lamp
+    numparticles = 30
+    gravity = XYZ(0,-10,0)
+    emitrate = 100
+    loops = 100
+    lifetime = random(0.2,0.8)
+    texture = "effect\\particle\\light-04.bmp"
+    initial color = rgba(255,0,255,100)
+    initial partAngleZ = random(0,360)
+    initial size = random(150,200)
+    initial velocity = XYZ(random(-25,25),random(-20,20),random(-25,25))
+    fade so final color = rgba(255,0,255,0)
+    fade so final size = random(1,20)
+    }
+
+  eventsequence "Smoke" {
+    sourceblendmode = BLEND_lamp
+    numparticles = 30
+    gravity = XYZ(0,-10,0)
+    emitrate = 100
+    loops = 100
+    lifetime = random(0.1,0.4)
+    texture = "effect\\particle\\blow_001.bmp"
+    initial color = rgba(255,255,255,200)
+    initial partAngleZ = random(0,360)
+    initial size = 150
+    initial velocity = XYZ(random(-10,10),0,random(-10,10))
+    fade so final color = rgba(255,255,0,0)
+    fade so final size = 20
+    }
+  eventsequence "Smoke" {
+    sourceblendmode = BLEND_lamp
+    numparticles = 30
+    gravity = XYZ(0,-10,0)
+    emitrate = 500
+    loops = 1000
+    emitradius = xyz(random(-50,50),random(-20,20),random(-50,50))
+    lifetime = random(0.8,1)
+    texture = "effect\\particle\\star05Y_01.bmp"
+    initial color = rgba(255,255,255,200)
+    initial partAngleZ = random(0,360)
+    initial size = random(5,10)
+    fade so at 0.5 size = random(15,30)
+    initial velocity = XYZ(random(-10,10),random(30,40),random(-10,10))
+    fade so final color = rgba(255,255,255,0)
+    fade so final size = 5
+    }
+  eventsequence "Smoke" {
+    sourceblendmode = BLEND_lamp
+    numparticles = 30
+    gravity = XYZ(0,-10,0)
+    emitrate = 500
+    loops = 1000
+    emitradius = xyz(random(-50,50),random(-20,20),random(-50,50))
+    lifetime = random(0.8,1)
+    texture = "effect\\particle\\star05B_01.bmp"
+    initial color = rgba(255,255,255,200)
+    initial partAngleZ = random(0,360)
+    initial size = random(5,10)
+    fade so at 0.5 size = random(15,30)
+    initial velocity = XYZ(random(-10,10),random(30,40),random(-10,10))
+    fade so final color = rgba(255,255,255,0)
+    fade so final size = 5
+    }
+
+  eventsequence "Smoke" {
+    sourceblendmode = BLEND_lamp
+    numparticles = 30
+    gravity = XYZ(0,-10,0)
+    emitrate = 500
+    loops = 1000
+    lifetime = random(0.2,0.8)
+    texture = "effect\\particle\\smokestar.bmp"
+    initial color = rgba(255,100,0,200)
+    initial partAngleZ = random(0,360)
+    initial size = random(120,180)
+    initial velocity = XYZ(random(-20,20),random(-20,20),random(-20,20))
+    fade so final color = rgba(255,100,0,0)
+    fade so final size = random(1,30)
+    }
+
+  eventsequence "Smoke" {
+    sourceblendmode = BLEND_lamp
+    numparticles = 5
+    gravity = XYZ(0,-10,0)
+    emitrate = 100
+    loops = 100
+    lifetime = 0.2
+    texture = "effect\\particle\\flare4.bmp"
+    initial color = rgba(100,0,255,200)
+    initial partAngleZ = random(0,360)
+    initial size = 400
+    initial velocity = XYZ(random(-5,5),random(-5,5),random(-5,5))
+    fade so final color = rgba(0,0,0,0)
+    }
+
+
+
+}

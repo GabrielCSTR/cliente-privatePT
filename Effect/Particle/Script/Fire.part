@@ -1,0 +1,57 @@
+particlesystem "Rain" 1.00 {
+  position = XYZ(0,0,0)
+  eventsequence "Drops" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 800
+    gravity = XYZ(0,0,0)
+    emitradius = xyz(random(-500,500),250,random(-500,500))
+    emitrate = 50
+    lifetime = 3
+    texture = "effect\\particle\\raindrops.bmp"    
+    initial color = rgba(255,255,255,random(50,250))
+    initial partAngle = XYZ(0,0,-28)
+    initial size = 3
+    initial sizeext = 25
+    fade so final size = 0
+    initial velocity = XYZ(-400,-700,0)
+    
+    }
+    
+    eventsequence "Watersprouts" {   
+    sourceblendmode = BLEND_LAMP
+    particletype = TYPE_FOUR
+    loops = 1000
+    numparticles = 50
+    gravity = XYZ(0,-200,0)
+    emitrate = 10
+    emitradius = xyz(random(-50,50),-20,random(-100,300))
+    lifetime = random(0.2,0.3)
+    texture = "effect\\particle\\raindrops.bmp"
+    initial size = 2
+    initial sizeExt = 3
+    initial color = rgba(255,255,255,255)
+    initial velocity = XYZ(random(-100,100),random(0,100),random(-100,100))
+    fade so final color = rgba(0,0,0,0)
+    fade so final size = 1
+
+}
+
+ eventsequence "Wind" {
+    sourceblendmode = BLEND_LAMP
+    numparticles = 2
+    gravity = XYZ(0,0,0)
+    emitradius = xyz(-400,50,random(-500,500))
+    emitrate = 2
+    lifetime = 4
+    texture = "effect\\particle\\hit6_601.bmp"    
+    initial color = rgba(255,255,255,random(0,10))
+    initial partAngle = XYZ(random(0,360),random(0,360),random(0,360))   
+    initial size = 1300  
+    initial velocity = XYZ(-250,-120,0)
+    fade so final color = rgba(0,0,0,0)
+    fade so final partangle = XYZ(random(0,360),random(0,360),random(0,360))   
+
+}  
+}
+
+
